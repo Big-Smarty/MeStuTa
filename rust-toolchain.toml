@@ -1,0 +1,25 @@
+[toolchain]
+# Use the latest nightly toolchain
+channel = "nightly"
+
+# The following targets are needed for:
+# Desktop Linux: x86_64-unknown-linux-gnu
+# Android: aarch64-linux-android (64-bit ARM) and i686-linux-android (32-bit x86)
+# WebAssembly: wasm32-unknown-unknown
+targets = [
+    "x86_64-unknown-linux-gnu", # Explicitly added for x86_64 Linux
+    "aarch64-linux-android",
+    "i686-linux-android",
+    "wasm32-unknown-unknown",
+	"x86_64-linux-android",
+	"armv7-linux-androideabi",
+]
+
+# Common components often useful in a development setup
+components = [
+    "rustfmt",
+    "clippy",
+	"rust-std",
+	"rust-src",
+	"rust-docs",
+]

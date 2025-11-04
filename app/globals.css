@@ -1,0 +1,115 @@
+/* app/globals.css - HFU Theme, Green Accent */
+
+/* --- HFU Color Palette Variables (Based on Website) --- */
+:root {
+  --hfu-green-dark: #006400;      /* Primary: Deep HFU Blue (Headers, Footer, BG) */
+  --hfu-blue-medium: #005090;
+  --hfu-green-accent: #70AD47;   /* Accent: Bright Green (Links, Buttons, Primary Logo color) */
+  --hfu-grey-dark: #4a4a4a;      /* Text Color */
+  --hfu-grey-light: #f5f5f5;     /* Main Body Background */
+  --hfu-white: #ffffff;
+}
+
+/* --- 1. CSS Reset (Basic) --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- 2. Base Styles --- */
+html,
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--hfu-grey-dark);
+  background-color: var(--hfu-grey-light);
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--hfu-green-dark);
+  margin-bottom: 0.5em;
+  font-weight: 600; 
+}
+
+h1 { font-size: 2.5em; }
+
+/* Paragraphs */
+p {
+  margin-bottom: 1em;
+}
+
+/* Links - Now Green Accent */
+a {
+  color: var(--hfu-green-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--hfu-green-dark); /* Dark blue on hover for contrast */
+  text-decoration: underline;
+}
+
+/* Buttons - Now Green Accent */
+button {
+  background-color: var(--hfu-green-accent);
+  color: var(--hfu-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5d9337; /* Slightly darker green on hover */
+}
+
+/* --- 3. Layout and Component Styles --- */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  flex-grow: 1; /* Allows main content to take up available space */
+}
+
+.header {
+  background-color: var(--hfu-green-dark);
+  color: var(--hfu-white);
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer {
+  background-color: var(--hfu-green-dark);
+  color: var(--hfu-grey-light);
+  padding: 15px 40px;
+  text-align: center;
+}
+
+.event-card {
+  background-color: var(--hfu-white);
+  border-left: 5px solid var(--hfu-green-accent); /* Green accent strip */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 20px 0;
+}
+
+.logo-text {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--hfu-white);
+  margin-left: 10px;
+}
