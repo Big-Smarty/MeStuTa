@@ -19,6 +19,7 @@ Um das Projekt für Android zu bauen, führe folgendes aus:
 ```bun tauri android build```
 
 Man kann die APK/AAB auch für eine spezielle Architektur exportieren:
+
 ```bun tauri android build -t aarch64 #moderne Architektur, beispielsweise ARMv8```
 
 # iOS
